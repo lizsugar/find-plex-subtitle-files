@@ -14,3 +14,4 @@ A third component that builds Knowledge Seeker's requisite json file is planned.
 # TODO
 - [ ] Any sort of error handling (e.g. when the show title is mistyped)
 - [ ] If the script is run twice with two different shows, create separate libraries for them
+- [ ] Clean up script further and standardize on variable naming (camelCase vs using_underscores)
