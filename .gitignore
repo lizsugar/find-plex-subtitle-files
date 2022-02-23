@@ -1,1 +1,5 @@
-plex_creds.py
+plex_config.py
+
+__pycache__
+
+library
