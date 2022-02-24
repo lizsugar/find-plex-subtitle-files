@@ -14,7 +14,7 @@ account = MyPlexAccount(plex_config.plex_account_name, plex_config.plex_account_
 plex = account.resource(plex_config.plex_server_name).connect()
 
 # Find Show's Episodes
-show = plex.library.section('TV Shows').get(args.show).episodes()[-1]
+show = plex.library.section('TV Shows').get(args.show).episodes()
 
 for ep in show:
   # Gotta reload metadata before subtitle streams will appear for some reason
