@@ -29,9 +29,15 @@ for ep in show:
 
 
   # Generate Downloaded Filenames
-  FileName = "season" + str(ep.seasonNumber) + "/" + ep.grandparentTitle+ " - " + ep.seasonEpisode + " - " + ep.title
+  FileName = ep.grandparentTitle+ " - " + ep.seasonEpisode + " - " + ep.title
   videoFileName = FileName + "." + epContainer
   subtitleFileName = FileName + ".srt"
+
+  videoDownloadPath = plex_config.videoDownloadPath + "season" + str(ep.seasonNumber) + "/"
+  subtitleDownloadPath = plex_config.subtitleDownloadPath + "season" + str(ep.seasonNumber) + "/"
+
+  print(videoFileName)
+  print(subtitleFileName)
 
   # Find our subtitle stream with path
   subtitleKey = ""
@@ -46,11 +52,11 @@ for ep in show:
 
 
   # Download!
-  print("Downloading subtitle file to " + plex_config.subtitleDownloadPath + subtitleFileName)
-  download(subtitleURL, plex_config.plex_server_token, filename=subtitleFileName, savepath=plex_config.subtitleDownloadPath, showstatus=True)
+  print("Downloading subtitle file to " + subtitleDownloadPath + subtitleFileName)
+  download(subtitleURL, plex_config.plex_server_token, filename=subtitleFileName, savepath=subtitleDownloadPath, showstatus=True)
 
   print("Downloading video file to " + plex_config.videoDownloadPath + videoFileName)
-  download(videoURL, plex_config.plex_server_token, filename=videoFileName, savepath=plex_config.videoDownloadPath, showstatus=True)
+  download(videoURL, plex_config.plex_server_token, filename=videoFileName, savepath=videoDownloadPath, showstatus=True)
   
   print("---\n")
 
