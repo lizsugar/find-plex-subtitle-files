@@ -29,7 +29,7 @@ for ep in show:
 
 
   # Generate Downloaded Filenames
-  FileName = ep.grandparentTitle+ " - " + ep.seasonEpisode + " - " + ep.title
+  FileName = "season" + str(ep.seasonNumber) + "/" + ep.grandparentTitle+ " - " + ep.seasonEpisode + " - " + ep.title
   videoFileName = FileName + "." + epContainer
   subtitleFileName = FileName + ".srt"
 
