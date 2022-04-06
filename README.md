@@ -17,3 +17,4 @@ A third component that builds Knowledge Seeker's requisite json file is planned.
 - [ ] Clean up script further and standardize on variable naming (camelCase vs using_underscores)
 - [ ] Do not download items that have already been downloaded
   - for partial downloads, we can check filesize?
+- [ ] Offer option to symlink video files if Plex server is the local machine
